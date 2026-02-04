@@ -1,0 +1,39 @@
+.htmlBody {
+  background-image: url("../img/Vlad.jpg");
+  /*background-size: cover;*/
+  /*height: 200px;
+  /*width: 200px;*/
+  /*background-color: black;*/
+}
+.redButton{
+  background-color: red;
+}
+.greenButton{
+  background-color: green;
+}
+.blueButton{
+  background-color: blue;
+}
+.purpleButton{
+  background-color: purple;
+}
+.redButton{
+  background-color: red;
+}
+/*
+.test{
+  -webkit-text-stroke: 1px yellow;
+}
+*/
+/*
+.halloween{
+  background-image: url("../img/Buttons/halloweenButtonClip.jpg");
+  color: chocolate;
+
+}
+*/
+
+.colorButtonClass{
+  width: 400px;
+  height: 100px;
+}

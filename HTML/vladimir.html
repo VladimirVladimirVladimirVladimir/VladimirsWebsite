@@ -1,0 +1,173 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <style>
+
+
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vladimir Prato Webpage</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../icon.png">
+
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+<div id="wholeBody" class="wholeBody">
+<body id="htmlBody" class="htmlBody">
+  <a href="./vladimir.html" >About Me Vladimir</a>
+  <a href="./Functions.html" >Functions</a>
+  <a href="./Matching.html" >Matching Gizmo</a>
+
+
+  <div id="colorButtonID" class="colorButtonClass">
+  <button style="width: 15px; offset: 2px; height: 10px"   id="redButton" type="button" class = "redButton"></button>
+  <button style="width: 15px; height: 10px" id="greenButton" type="button" class = "greenButton"></button>
+  <button style="width: 15px; height: 10px" id="blueButton" type="button" class = "blueButton"></button>
+  <button style="width: 15px; height: 10px" id="purpleButton" type="button" class = "purpleButton"></button>
+  <button style="width: 15px; height: 10px" id="pinkButton" type="button" class = "pinkButton">PINKPage!</button>
+  <button style="width: 15px; height: 10px" id="halloween" type="button" class = "halloween">HALOWEEN THEME</button>
+
+</div>
+
+  <h1 style="color: blue;">Vladimir Prato</h1>
+  <div id="introduction" class="test">
+    <h2>About Vladimir Prato</h2>
+
+    <p>
+      Vladimir Prato is a Computer Science major who enjoys many other things. However <br>
+      his major right now is his primary focus and goal, and he is addressing and performing <br>
+      very well and successfully. He is well on his way to accomplish many goals and has <br>
+      coding personal projects that he is very proud of including a Stock Calculator <br>
+      that is included in this website, that he uses for his strock trading. Vladimir Prato <br>
+      is very proud of his learning accomplishments and online educational programs.
+    </p>
+    <!--Vladimir Prato is a Brown American <em>Mulatto</em> <br>
+      male who is well accomplished and he has faced many <br>
+      murder and death moments against his people. Known for <br>
+      his sharp smile and dashing personality mixed <br>
+      with outstanding wit and informative cooperation <br>
+      in the world of man and woman. He is a <strong>genius artist</strong> <br>
+      who is self and socially involved and intertwined with the <br>
+      arts and the science.</p>-->
+    <h3>Statistics</h3>
+    <ul>
+      <li>Athlete</li>
+      <li>University Graduate <a href="https://www.fiu.edu/" target="_blank">FIU</a> </li>
+      <li>Musician</li>
+      <li>Avid Lover</li>
+    </ul>
+    <h3>Features</h3>
+    <ul>
+      <li>6 feet</li>
+      <li>Caramel/Light Brown Skin Tone</li>
+      <li>250 Pounds</li>
+      <li>Dark Black Curly Hair</li>
+    </ul>
+  </div>
+  <div id="Location">
+    <h2>Living Locations</h2>
+    <h3>Municipalites</h3>
+    <ol>
+      <li>North Miami</li>
+      <li>Westchester</li>
+      <li>Tamiami Hall</li>
+    </ol>
+
+
+  </div>
+  <div id="media">
+    <h2>Media</h2>
+
+      <img src="../img\Aventura50.png" alt="Flowers"/>
+    <video src="../Videos\VideoPool.mp4" width=
+      "320" height="336" controls>
+    Error Loading Video
+    </video>
+
+  </div>
+
+  <div id="pcInfo">
+    <button id="pcInfoButton" type="button">PC INFO CLICK HERE!</button>
+    <h1 id="pcInfoH1">PC INFO
+    </h1>
+
+  </div>
+
+  <button id="myButton" type="button">Click Me!</button>
+
+  <h5 class="advice"></h5>
+  <button class="btn">Get advice</button>
+  <p>You have read <strong class="count"></strong> pieces of advice</p>
+  <p id="adviceFullOutput"></p>
+  <h6 class="stockCalc">STOCK CALCULATER</h6>
+
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname">
+  </form>
+
+  <script src="../js/app.js"></script>
+
+  <script>
+  // Manually selecting DOM elements (which require a class or ID in markup)
+  let adviceApiCount = 0;
+  const adviceArray = []
+  const adviceEl = document.querySelector(".advice");
+  const btnEl = document.querySelector(".btn");
+  const countEl = document.querySelector(".count");
+  const getAdviceParagraph = document.getElementById('adviceFullOutput');
+
+  const getAdvice = async function () {
+    const res = await fetch("https://api.adviceslip.com/advice");
+    adviceApiCount++;
+    const data = await res.json();
+
+    let word = ""
+  let a = 0;
+q
+    advice = data.slip.advice;
+    countA = countA + 1;
+
+    //for (let i = 0; i < adviceApiCount; i++) {
+      adviceArray.push(advice)
+    //}
+
+    //for (let a = 0; a < adviceArray.length; a++) {
+      word += adviceArray[a].toString() + "\n\n";
+      a++;
+      getAdviceParagraph.textContent = "" + word;
+    //}
+
+    // Manually updating DOM elements
+    countEl.textContent = countA;
+    adviceEl.textContent = advice;
+  };
+
+  // Setting initial values
+  let countA = 0;
+  let advice;
+  getAdvice();
+
+  // Attaching an event listener
+  btnEl.addEventListener("click", getAdvice);
+
+</script>
+
+</body>
+</div>
+
+</html>

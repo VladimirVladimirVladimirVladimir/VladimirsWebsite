@@ -1,0 +1,33 @@
+p{
+font-size: 5em;
+}
+
+body {
+  font-style: italic;
+  background-image: url('img/Aventura.jpg'); /* Adjust the file path as needed */
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+  background-size: cover;
+  background-color: aqua;
+  background-position: center;  /* Centers the image */
+  height: 400px;
+  width: 100%;
+}
+
+.buttonDivClass{
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button{
+  width: 200px;
+  height: 200px;
+  background: no-repeat;
+  background-position: center;
+}
