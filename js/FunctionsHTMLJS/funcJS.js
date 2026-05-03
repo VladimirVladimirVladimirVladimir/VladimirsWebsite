@@ -1,5 +1,6 @@
 const vladimirFaceButton = document.getElementById('button2ID')
 const vladimirParagraph = document.getElementById('vladimirParagraphID')
+const
 
 let vFaceCount = 0;
 const tC = vladimirParagraph.textContent;

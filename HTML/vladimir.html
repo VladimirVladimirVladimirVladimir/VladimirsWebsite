@@ -76,7 +76,7 @@
       <li>Dark Black Curly Hair</li>
     </ul>
   </div>
-  <div id="Location">
+  <div id="Location Of Life">
     <h2>Living Locations</h2>
     <h3>Municipalites</h3>
     <ol>
@@ -125,7 +125,7 @@
   <script>
   // Manually selecting DOM elements (which require a class or ID in markup)
   let adviceApiCount = 0;
-  const adviceArray = []
+  const adviceArray = [0]
   const adviceEl = document.querySelector(".advice");
   const btnEl = document.querySelector(".btn");
   const countEl = document.querySelector(".count");
@@ -138,18 +138,18 @@
 
     let word = ""
   let a = 0;
-q
+
     advice = data.slip.advice;
     countA = countA + 1;
 
     //for (let i = 0; i < adviceApiCount; i++) {
-      adviceArray.push(advice)
+     // adviceArray.push(advice)
     //}
 
     //for (let a = 0; a < adviceArray.length; a++) {
-      word += adviceArray[a].toString() + "\n\n";
-      a++;
-      getAdviceParagraph.textContent = "" + word;
+      //word += adviceArray[a].toString() + "\n\n";
+     // a++;
+     // getAdviceParagraph.textContent = "" + word;
     //}
 
     // Manually updating DOM elements
